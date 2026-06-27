@@ -1,6 +1,6 @@
 # PRD Creator (a Claude skill)
 
-A Claude skill that turns a feature idea into a build-ready PRD through four layers: codebase recon before any questions, a structured one-question-at-a-time interview with opinionated defaults, a claims ledger that backs every factual assertion with a file:line citation, and blind adversarial review by two fresh-context AI reviewers. It produces a dense machine-ready Markdown spec for an AI coding agent plus a formatted Word PRD for human readers.
+A Claude skill that turns a feature idea into a build-ready PRD through four layers: codebase recon before any questions, a structured one-question-at-a-time interview with opinionated defaults, a claims ledger that backs every factual assertion with a file:line citation, and an adversarial review stage. The review stage runs two blind fresh-context AI reviewers plus a third structured-pass reviewer; when that third arm catches a class of issue the blind reviewers missed, the lesson is folded back into the blind-review prompt so the review keeps getting stronger over time. It produces a dense machine-ready Markdown spec for an AI coding agent plus a formatted Word PRD for human readers.
 
 It scales from a one-page fast-path spec for small personal tools up to a full 18-section treatment for hardened, public-facing applications (security checklist, audit hooks, monitoring, rollout and rollback plans).
 
@@ -21,4 +21,4 @@ Then say "Write a PRD for ..." and the skill takes over.
 - `references/review-prompts.md` -- the blind-review prompt and the adjudication rules for reviewer findings
 - `scripts/md_to_docx.py` -- converts a finished spec to a Word document (requires python-docx)
 
-Version 2 (2026-06-03).
+Version 2 (2026-06-03). Updated 2026-06-27: added a money-path gate and a decision-vs-conversation reconciliation check, and a third structured review arm whose blind-missed catches ratchet back into the blind-review prompt.

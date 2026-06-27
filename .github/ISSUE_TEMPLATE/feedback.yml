@@ -1,0 +1,51 @@
+name: Feedback or bug report
+description: Tell the maintainer what worked, what broke, or what to improve in the prd-creator skill.
+title: "[feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for trying the skill. Real-world feedback is what shapes future versions, so the more concrete the better.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of feedback
+      options:
+        - Bug / something broke
+        - Suggestion / improvement
+        - A PRD it produced was wrong or missed something
+        - It worked well / praise
+        - Question
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did you run it?
+      options:
+        - Claude Code (CLI)
+        - Claude desktop app
+        - Other / not sure
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part of the skill, if you know?
+      options:
+        - The interview / questions
+        - The codebase recon / claims ledger
+        - The blind review (including the structured third arm)
+        - The spec template / output format
+        - The Word-doc conversion script
+        - Not sure / general
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, or what would you change?
+      description: Be as concrete as you can. If it is a bug, what did you expect versus what you got?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Optional. What you were building, the kind of project, the model you used. Please redact anything private; this is a public issue.

@@ -21,4 +21,8 @@ Then say "Write a PRD for ..." and the skill takes over.
 - `references/review-prompts.md` -- the blind-review prompt and the adjudication rules for reviewer findings
 - `scripts/md_to_docx.py` -- converts a finished spec to a Word document (requires python-docx)
 
+## Feedback
+
+Found a bug, or have a suggestion? [Open an issue](../../issues/new/choose). Bug reports, improvement ideas, and "the PRD it wrote missed X" reports all directly shape future versions. Please keep anything private out of public issues.
+
 Version 2 (2026-06-03). Updated 2026-06-27: added a money-path gate and a decision-vs-conversation reconciliation check, and a third structured review arm whose blind-missed catches ratchet back into the blind-review prompt.
